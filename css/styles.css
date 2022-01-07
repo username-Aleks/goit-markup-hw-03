@@ -172,7 +172,7 @@ header {
 }
 .advantage-title {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 10px;
 
   color: var(--secondary-tex-color);
   font-weight: 700;
