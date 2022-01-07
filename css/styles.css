@@ -50,6 +50,10 @@ img {
   margin-left: auto;
   margin-right: auto;
 }
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
 /* __________________________________________шапка сайта студии__________________________________________________________ */
 header {
   border-bottom: 1px solid #ececec;
@@ -155,10 +159,7 @@ header {
   line-height: 1.16;
   text-align: center;
 }
-.advantage-section {
-  padding-top: 95px;
-  padding-bottom: 95px;
-}
+
 .advantage {
   display: flex;
 }
@@ -187,9 +188,6 @@ header {
   line-height: 1.71;
 }
 /* ____________________секция чем занимается компания______________ */
-.specialization-section {
-  padding-bottom: 95px;
-}
 .specialization {
   display: flex;
 }
@@ -216,9 +214,12 @@ header {
 .team .item:nth-child(4n) {
   margin-right: 0;
 }
+.team-photo {
+  margin-bottom: 30px;
+}
 
 .team-title {
-  margin-top: 30px;
+  margin-top: 0;
   margin-bottom: 10px;
 
   color: var(--secondary-tex-color);
@@ -235,16 +236,9 @@ header {
   text-align: center;
 }
 .our-team {
-  padding-top: 95px;
-  padding-bottom: 95px;
   background-color: var(--secondary-background-color);
 }
 /* _____________________________портфолио____________________ */
-.portfolio {
-  padding-top: 95px;
-  padding-bottom: 95px;
-}
-
 .portfolio-buttons {
   display: flex;
   width: 620px;
