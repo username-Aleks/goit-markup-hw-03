@@ -242,8 +242,10 @@ header {
   padding-top: 95px;
   padding-bottom: 95px;
 }
+
 .portfolio-buttons {
   display: flex;
+  width: 620px;
   margin-left: auto;
   margin-right: auto;
 
@@ -252,6 +254,7 @@ header {
 .portfolio-buttons .item + .item {
   margin-left: 8px;
 }
+/* __________________________проекты_____________________ */
 .project-title {
   margin-top: 0;
   margin-bottom: 4px;
