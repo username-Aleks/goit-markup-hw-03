@@ -2,8 +2,11 @@
   --pimary-tex-color: #757575;
   --accent-tex-color: #2196f3;
   --secondary-tex-color: #212121;
-  --clear-white-text-color: #ffffff;
+  --primary-white-color: #ffffff;
+  --primary-black-color: #000000;
   --secondary-background-color: #f5f4fa;
+  --hero-footer-background-color: #2f303a;
+  --hero-button-hover-color: #188ce8;
 }
 
 /* палитра */
@@ -16,23 +19,37 @@
 /* цвет акцента главной  кнопки    #188CE8 */
 /* цвет адреса   rgba(255, 255, 255, 0.6) */
 /* цвет фона героя и футера #2F303A */
-/* дополнительный цвет текста логотипа  #000000 */
+/* дополнительный цвет текста логотипа, рамки главной кнопки  #000000 */
 
 body {
   font-family: "Roboto", sans-serif;
-  background-color: #ffffff;
+  background-color: var(--primary-white-color);
   color: var(--pimary-tex-color);
   letter-spacing: 0.03em;
 }
 /* *********************style reset******************** */
 .list {
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 .link {
   text-decoration: none;
 }
+img {
+  display: block;
+}
+
 /* **************************************************** */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+}
 /* __________________________________________шапка сайта студии__________________________________________________________ */
+header {
+  border-bottom: 1px solid #ececec;
+}
 .logo {
   font-family: raleway, sans-serif;
   color: var(--accent-tex-color);
@@ -41,20 +58,48 @@ body {
   line-height: 1.19;
 }
 .logo-header {
-  color: #000000;
+  color: var(--primary-black-color);
 }
 .logo-footer {
-  color: var(--clear-white-text-color);
+  color: var(--primary-white-color);
 }
 /* ___________________________________________навигация___________________________________________________________ */
+.header-nav {
+  display: flex;
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+.site-nav {
+  display: flex;
+  margin-left: 95px;
+}
+.contacts .item + .item,
+.site-nav .item + .item {
+  margin-left: 50px;
+}
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--secondary-tex-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
 }
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
+
 .contacts .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--pimary-tex-color);
   font-weight: 500;
   font-size: 14px;
@@ -67,20 +112,26 @@ body {
 .contacts .link:focus,
 .adress-contacts .link:hover,
 .adress-contacts .link:focus {
-  color: #2196f3;
+  color: var(--accent-tex-color);
+}
+.site-nav .current.link {
+  color: var(--accent-tex-color);
 }
 /* __________________________________ герой ______________________________________________________________ */
 
 .hero {
-  background-color: #2f303a;
+  background-color: var(--hero-footer-background-color);
+  text-align: center;
 }
 
 .hero-title {
-  color: var(--clear-white-text-color);
+  margin-top: 0;
+  margin-bottom: 30px;
+
+  color: var(--primary-white-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
@@ -88,67 +139,110 @@ body {
 /* _____________________________________основная информация страницы__________________________________________ */
 
 .section-title {
+  margin-top: 0;
+  margin-bottom: 50;
+
+  color: var(--secondary-tex-color);
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
   text-align: center;
 }
 .advantage-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  color: var(--secondary-tex-color);
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
 }
 .advantage-text {
+  margin-top: 0;
+  margin-bottom: 0;
+
   font-size: 14px;
   line-height: 1.71;
 }
+.team {
+  text-align: center;
+}
+.team-item {
+  padding-bottom: 30px;
+  background-color: var(--primary-white-color);
+}
+
 .team-title {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
+  color: var(--secondary-tex-color);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
-  text-align: center;
 }
 .team-profession {
+  margin-top: 0;
+  margin-bottom: 0;
+
   font-size: 16px;
   line-height: 1.18;
   text-align: center;
 }
+
 .project-title {
+  margin-top: 0;
+  margin-bottom: 4px;
+
+  color: var(--secondary-tex-color);
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
 }
 .project-type {
+  margin-top: 0;
+  margin-bottom: 0;
+
   color: var(--pimary-tex-color);
   font-size: 16px;
   line-height: 1.87;
 }
-.section-title,
-.advantage-title,
-.team-title,
-.project-title {
-  color: var(--secondary-tex-color);
-}
+
 .our-team {
-  background-color: #f5f4fa;
+  background-color: var(--secondary-background-color);
 }
 /* ____________________________________________подвал страницы_______________________________________________ */
 .footer {
-  background-color: #2f303a;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--hero-footer-background-color);
 }
 .adress {
-  color: var(--clear-white-text-color);
+  color: var(--primary-white-color);
   font-style: normal;
   font-size: 14px;
   line-height: 1.71;
+}
+.adress-location {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.adress-contact-item {
+  margin-bottom: 10px;
 }
 .adress-contacts .link {
   color: rgba(255, 255, 255, 0.6);
 }
 /* ____________________________________________BUTTONS_________________________________________________ */
 .button {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 6px 22px;
+  min-width: 73px;
+
   font-family: inherit;
   font-weight: 500;
   font-size: 16px;
@@ -161,18 +255,22 @@ body {
 .button:hover,
 .button:focus {
   background-color: var(--accent-tex-color);
-  color: var(--clear-white-text-color);
+  color: var(--primary-white-color);
 }
-.main.button {
+.hero-button.button {
+  padding: 10px 32px;
+  border: 1px;
+  border-color: var(--primary-black-color);
+
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   text-align: center;
   letter-spacing: 0.06em;
   background-color: var(--accent-tex-color);
-  color: var(--clear-white-text-color);
+  color: var(--primary-white-color);
 }
-.main.button:hover,
-.main.button:focus {
-  background-color: #188ce8;
+.hero-button.button:hover,
+.hero-button.button:focus {
+  background-color: var(--hero-button-hover-color);
 }
