@@ -42,9 +42,11 @@ img {
 
 /* **************************************************** */
 .container {
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
 }
 /* __________________________________________шапка сайта студии__________________________________________________________ */
 header {
@@ -120,6 +122,9 @@ header {
 /* __________________________________ герой ______________________________________________________________ */
 
 .hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
   background-color: var(--hero-footer-background-color);
   text-align: center;
 }
@@ -137,10 +142,10 @@ header {
 }
 
 /* _____________________________________основная информация страницы__________________________________________ */
-
+/* ____________секция преимущества компании________________ */
 .section-title {
   margin-top: 0;
-  margin-bottom: 50;
+  margin-bottom: 50px;
 
   color: var(--secondary-tex-color);
   font-weight: 700;
@@ -148,9 +153,23 @@ header {
   line-height: 1.16;
   text-align: center;
 }
+.advantage-section {
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+.advantage {
+  display: flex;
+}
+.advantage .item {
+  width: 270px;
+  margin-right: 30px;
+}
+.advantage .item:nth-child(4n) {
+  margin-right: 0;
+}
 .advantage-title {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 
   color: var(--secondary-tex-color);
   font-weight: 700;
@@ -165,12 +184,35 @@ header {
   font-size: 14px;
   line-height: 1.71;
 }
+/* ____________________секция чем занимается компания______________ */
+.specialization-section {
+  padding-bottom: 95px;
+}
+.specialization {
+  display: flex;
+}
+.specialization .item {
+  width: 370px;
+  margin-right: 30px;
+}
+.specialization .item:nth-child(3n) {
+  margin-right: 0;
+}
+/* __________________________секция наша команда___________________ */
 .team {
+  display: flex;
   text-align: center;
 }
-.team-item {
+.team .item {
+  width: 270px;
+  margin-right: 30px;
   padding-bottom: 30px;
+
+  border-radius: 4px;
   background-color: var(--primary-white-color);
+}
+.team .item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .team-title {
@@ -190,7 +232,26 @@ header {
   line-height: 1.18;
   text-align: center;
 }
+.our-team {
+  padding-top: 95px;
+  padding-bottom: 95px;
+  background-color: var(--secondary-background-color);
+}
+/* _____________________________портфолио____________________ */
+.portfolio {
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+.portfolio-buttons {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
 
+  margin-bottom: 50px;
+}
+.portfolio-buttons .item + .item {
+  margin-left: 8px;
+}
 .project-title {
   margin-top: 0;
   margin-bottom: 4px;
@@ -210,9 +271,6 @@ header {
   line-height: 1.87;
 }
 
-.our-team {
-  background-color: var(--secondary-background-color);
-}
 /* ____________________________________________подвал страницы_______________________________________________ */
 .footer {
   padding-top: 60px;
@@ -252,6 +310,7 @@ header {
   color: var(--secondary-tex-color);
   cursor: pointer;
 }
+.active-btn,
 .button:hover,
 .button:focus {
   background-color: var(--accent-tex-color);
