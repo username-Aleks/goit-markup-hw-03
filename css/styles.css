@@ -228,9 +228,6 @@ header {
 .team .item:nth-child(4n) {
   margin-right: 0;
 }
-/* .team-photo {
-  margin-bottom: 30px;
-} */
 
 .team-text {
   padding-top: 30px;
